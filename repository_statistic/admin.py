@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from repository_statistic.models import RepositoryStatistic
+
+admin.site.register(RepositoryStatistic)

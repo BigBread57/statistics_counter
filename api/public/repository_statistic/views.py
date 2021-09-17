@@ -11,7 +11,7 @@ from repository_statistic.models import RepositoryStatistic
 
 class RepositoryStatisticViewSet(viewsets.ModelViewSet):
     """
-    Набор представлений для статистики
+    Набор представлений для события
     """
 
     queryset = RepositoryStatistic.objects.all()
@@ -52,7 +52,7 @@ class RepositoryStatisticViewSet(viewsets.ModelViewSet):
 
 class RepositoryStatisticList(generics.ListAPIView):
     """
-    Набор представлений для статистики
+    Представление для вывода статистики по событиям
     """
 
     queryset = RepositoryStatistic.objects.all()
@@ -77,6 +77,9 @@ class RepositoryStatisticList(generics.ListAPIView):
 
 
 class DeleteRepository(APIView):
+    """
+    Представление для уничтожения статистики
+    """
 
     queryset = RepositoryStatistic.objects.all()
 

@@ -4,6 +4,9 @@ from repository_statistic.models import RepositoryStatistic
 
 
 class RepositoryStatisticSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор для получения информации о первоначальной информации о событии
+    """
 
     class Meta:
         model = RepositoryStatistic
@@ -21,7 +24,7 @@ class RepositoryStatisticSerializer(serializers.ModelSerializer):
 
 class GetStatisticSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для работы со статистикой
+    Сериализатор для работы со статистикой по событию
     """
     cpc = serializers.SerializerMethodField()
     cpm = serializers.SerializerMethodField()

@@ -73,7 +73,7 @@ class RepositoryStatisticList(generics.ListAPIView):
             query = Q(query)
         return super().get_queryset().values('date').filter(query).annotate(views=Sum('views'),
                                                                             clicks=Sum('clicks'),
-                                                                            cost=Sum('cost'))
+                                                                            cost=Sum('cost')).order_by('-date')
 
 
 class DeleteRepository(APIView):
